@@ -39,8 +39,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //888888888888888888888888888888888888888888
 
 
-
-
+#define CONTROLLER_REF_NAME "controller-ref-chan"
 
 
 //888888888888888888888888888888888888888888
@@ -59,6 +58,6 @@ typedef struct controller_ref {
 //	double ref[HUBO_JOINT_COUNT];	///< joint reference
 //	int16_t mode[HUBO_JOINT_COUNT]; 	///< mode 0 = filter mode, 1 = direct reference mode
 //	int8_t comply[HUBO_JOINT_COUNT];
-}__attribute__((packed)) hubo_ref_t;
+}__attribute__((packed)) controller_ref_t;
 
 

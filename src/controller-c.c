@@ -19,7 +19,6 @@
 
 
 
-#define CONTROLLER_REF_NAME "controller-ref-name"
 
 
 /* Ach Channel IDs */
@@ -35,6 +34,7 @@ int main(int argc, char **argv) {
     /* Create initial structures to read and write from */
     struct controller_ref c_ref;
     memset( &c_ref, 0, sizeof(c_ref));
+    ach_put( &chan_controller_ref, &c_ref, sizeof(c_ref));
 
     /* for size check */
     size_t fs;
