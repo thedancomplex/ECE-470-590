@@ -34,7 +34,6 @@ int main(int argc, char **argv) {
     /* Create initial structures to read and write from */
     struct controller_ref c_ref;
     memset( &c_ref, 0, sizeof(c_ref));
-    ach_put( &chan_controller_ref, &c_ref, sizeof(c_ref));
 
     /* for size check */
     size_t fs;
@@ -45,23 +44,15 @@ int main(int argc, char **argv) {
         assert( sizeof(c_ref) == fs );
     }
 
-    printf("mot 1 = %f\r\n",c_ref.mot1);
-    printf("mot 2 = %f\r\n",c_ref.mot2);
-
-
-    r = ach_get( &chan_controller_ref, &c_ref, sizeof(c_ref), &fs, NULL, ACH_O_WAIT );
-    if(ACH_OK != r) {
-        assert( sizeof(c_ref) == fs );
-    }
-
-    printf("mot 1 = %f\r\n",c_ref.mot1);
-    printf("mot 2 = %f\r\n",c_ref.mot2);
-
-
-    usleep(2500000);
+    c_ref.mot1 = 1.234;
+    c_ref.mot2 = 2.345;
 
 
 
-    //ach_put( &chan_controller_ref, &c_ref, sizeof(c_ref));
+    usleep(100000);
+
+
+
+    ach_put( &chan_controller_ref, &c_ref, sizeof(c_ref));
 }
 
