@@ -1,4 +1,4 @@
-ECE-499-590-Fall-2014
-=====================
+hubo-simple-demo
+================
 
-ECE-499-590-Fall-2014
+simple c demmo for hubo
