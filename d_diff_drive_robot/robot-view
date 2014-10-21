@@ -113,13 +113,13 @@ RunViewServer()
 
    if [[ $FLAG_QUESTION -eq 1 ]]
    then
-     gazebo midterm2-qMonCam.world &
+     gazebo MonCam.world &
    elif [[ $FLAG_QUESTION -eq 2 ]]
    then
-     gazebo midterm2-qStereoCam.world &
+     gazebo StereoCam.world &
    elif [[ $FLAG_QUESTION -eq 3 ]]
    then
-     gazebo midterm2-qFollow.world &
+     gazebo Follow.world &
    else
      gazebo model_diff_drive.world &
    fi
