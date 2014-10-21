@@ -3,7 +3,7 @@ import numpy as np
 
 while(1):
 
-    frame = cv2.imread('robotnoise2.png')
+    frame = cv2.imread('robotnoise.png')
     frame = cv2.resize(frame, (0,0), fx=0.2, fy=0.2) 
     height, width = frame.shape[:2]
     print 'width = ' , width , ' height = ', height
