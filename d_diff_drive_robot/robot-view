@@ -119,7 +119,7 @@ RunViewServer()
      gazebo StereoCam.world &
    elif [[ $FLAG_QUESTION -eq 3 ]]
    then
-     gazebo Follow.world &
+     gazebo FollowCam.world &
    else
      gazebo model_diff_drive.world &
    fi
